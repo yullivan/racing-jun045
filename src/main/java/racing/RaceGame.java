@@ -31,7 +31,7 @@ public class RaceGame {
         // 우승자
         List<Car> winners = findWinner(자동차리스트);
         for (Car car : winners) {
-            System.out.println("우승자"+ car.getName() + " (전진 횟수: " + car.getAdvance() + ")");
+            System.out.println("우승자"+ car.getName());
         }
 
     }
