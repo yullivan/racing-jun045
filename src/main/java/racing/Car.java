@@ -7,7 +7,7 @@ import java.util.List;
 public class Car {
     //차 이름 받기
     private String name;
-    private int advance;  //각각 차들저장
+    private int advance;  //각각 차들 횟수 저장
 
     public Car(String name, int advance) {
         this.name = name;
@@ -31,7 +31,7 @@ public class Car {
         return advance;
     }
 
-    //max 횟수 비교
+    //max  비교
     public static List<Car> findWinner(List<Car> 자동차리스트) {
         List<Integer> 횟수_비교 = 자동차리스트.stream()
                 .map(n ->n.getAdvance())

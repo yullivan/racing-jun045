@@ -2,16 +2,23 @@ package racing;
 
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 import static racing.Car.findWinner;
 
-// 반복문 랜덤생성 후 전진, 정지
+// 반복문 랜덤 후 전진, 정지
 public class RaceGame {
 
-    public static void race(List<Car> 자동차리스트, int count) {
+    public static void race(List<Car> 자동차리스트) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        // 사용자로부터 라운드 수 입력 받기
+        System.out.print("몇 회 시행할까요?");
+        int count = scanner.nextInt();  // 사용자로부터 정수 입력 받기
         Random rand = new Random();  // 랜덤 객체 생성
 
-        // 라운드 수만큼 반복
+        // 라운드 입력 수만큼 반복
         for (int round = 1; round <= count; round++) {
             System.out.println("레이스 시작");
 
